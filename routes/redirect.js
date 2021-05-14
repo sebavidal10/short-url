@@ -11,8 +11,7 @@ router.get('/:code', async (req, res) => {
       urlCode: req.params.code,
     });
     if (url) {
-      // when valid we perform a redirect
-      return res.redirect(url.longUrl);
+      return res.redirect(url.urlOriginal);
     } else {
       // else return a not found 404 status
       return res.status(404).json('No URL Found');

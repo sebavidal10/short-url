@@ -8,7 +8,7 @@ const router = express.Router();
 const Url = require('../models/url');
 
 // Url Api
-const baseUrl = 'http:localhost:5000';
+const baseUrl = 'http:localhost:5050';
 
 router.post('/shorten', async (req, res) => {
   // body example: {"urlOriginal": "https://www.av.com"}
