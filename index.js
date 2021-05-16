@@ -16,6 +16,7 @@ app.use(
 
 app.use('/', require('./routes/redirect'));
 app.use('/api/url', require('./routes/url'));
+app.use('/api/list', require('./routes/list'));
 
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5050;
 app.listen(PORT, console.log(`server started, listening PORT ${PORT}`));

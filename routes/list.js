@@ -4,13 +4,12 @@ const router = express.Router();
 
 const Url = require('../models/url');
 
-router.get('/:code', async (req, res) => {
+router.get('/', async (req, res) => {
+  console.log('asd');
   try {
-    const url = await Url.findOne({
-      urlCode: req.params.code,
-    });
+    const url = await Url.find({});
     if (url) {
-      return res.redirect(url.urlOriginal);
+      return res.json(url);
     } else {
       return res.status(404).json('No URL Found');
     }
